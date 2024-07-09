@@ -11,16 +11,14 @@ const Template: StoryFn<typeof AccordionToggle> = (args) => <AccordionToggle {..
 
 export const Default = Template.bind({});
 Default.args = {
-  initialShowCount: 3,
-  buttonTextAccordion: 'Show More',
-  buttonTextAccordionActive: 'Show Less',
-  children: (
-    <>
-      <div>Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
-      <div>Item 4</div>
-      <div>Item 5</div>
-    </>
-  ),
+  initialShowCount: 1,
+  buttonTextAccordion: 'More',
+  buttonTextAccordionActive: 'Close',
+  children: [
+    <div key="1">Item 1</div>,
+    <div key="2">Item 2</div>,
+    <div key="3">Item 3</div>,
+    <div key="4">Item 4</div>,
+    <div key="5">Item 5</div>,
+  ],
 };

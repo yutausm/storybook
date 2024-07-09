@@ -1,21 +1,31 @@
 import { create } from "@storybook/theming";
-import brandLogo from "../src/stories/assets/BNFJ23Y4ZP.svg";
+import brandLogo from "../src/stories/assets/storybook-logo.png";
 
+const colors = {
+  base: '#f9f8f6',
+  assort: '#401d00',
+  accsent: '#b67337',
+  primary: '#401d00',
+  secondary: '#2a4c60',
+  border: '#401d00',
+  font: '#401d00',
+  inverse: 'rgba(64, 29, 0, 0.5)',
+}
 export default create({
   // base theme
-  base: "light",
+  base: colors.base,
 
   // primary color
-  colorPrimary: "hotpink",
+  colorPrimary: colors.primary,
   // side menu color
-  colorSecondary: "deepskyblue",
+  colorSecondary: colors.secondary,
   // -- UI --
   // background
-  appBg: "white",
+  appBg: colors.base,
   // contents background
-  appContentBg: "silver",
+  appContentBg: colors.base,
   // border color
-  appBorderColor: "gray",
+  appBorderColor: colors.border,
   // radius(small window on toolbar menu when slected)
   appBorderRadius: 4,
 
@@ -24,24 +34,24 @@ export default create({
   fontBase: '"Open Sans", sans-serif',
   fontCode: "monospace",
   // font colors
-  textColor: "black",
-  textInverseColor: "rgba(255,255,255, 0.9)",
+  textColor: colors.font,
+  textInverseColor: colors.inverse,
 
   // -- Toolbar default and active colors --
   // toolber font color
-  barTextColor: "silver",
+  barTextColor: colors.font,
   // menu font color on toolbar when selected
-  barSelectedColor: "black",
+  barSelectedColor: colors.font,
   // toolbar background
-  barBg: "hotpink",
+  barBg: colors.base,
 
   // -- Form colors --
   // input background
-  inputBg: "white",
+  inputBg: colors.base,
   // input border color
-  inputBorder: "silver",
+  inputBorder: colors.border,
   // font color in input
-  inputTextColor: "black",
+  inputTextColor: colors.font,
   // radius for input
   inputBorderRadius: 4,
 

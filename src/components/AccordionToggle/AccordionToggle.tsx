@@ -14,15 +14,16 @@ const AccordionToggle: React.FC<AccordionToggleProps> = ({
   buttonTextAccordionActive = '',
 }) => {
   const [showMore, setShowMore] = useState(false);
-  const toggle = () => setShowMore(!showMore);
 
   useEffect(() => {
     setShowMore(React.Children.count(children) <= initialShowCount);
   }, [children, initialShowCount]);
 
+  const toggle = () => setShowMore(!showMore);
+
   const visibleChildren = React.Children.toArray(children).slice(
     0,
-    showMore ? React.Children.count(children) : initialShowCount,
+    showMore ? React.Children.count(children) : initialShowCount
   );
 
   return (
